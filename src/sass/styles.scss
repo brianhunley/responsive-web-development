@@ -1,0 +1,31 @@
+//
+//-- Main SCSS file
+//
+
+// Load config
+@import 'config/config';
+
+// load mixins
+@import 'mixins/mixins_general';
+@import 'mixins/mixins_breakpoints';
+@import 'mixins/mixins_grids';
+
+// Load base
+@import 'base/reset';
+@import 'base/helper_classes';
+@import 'base/typography';
+
+// Load structure
+@import 'structure/header';
+@import 'structure/sections';
+@import 'structure/footer';
+
+// Load modules
+@import 'modules/grids';
+
+// Load pages
+@import 'pages/welcome';
+@import 'pages/services';
+@import 'pages/portfolio';
+@import 'pages/blog';
+@import 'pages/contact';
