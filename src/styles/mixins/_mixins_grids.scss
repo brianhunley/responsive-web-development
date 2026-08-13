@@ -1,6 +1,4 @@
-//
-//-- Grid Mixins
-//
+@use 'sass:math';
 
 @mixin generate_grid($type, $gutter) {
 	%grid-#{$type}--base {
@@ -12,7 +10,7 @@
 	@for $i from 1 through 12 {
 		.grid-#{$type}--#{$i} {
 			@extend %grid-#{$type}--base;
-			width: (100% / 12) * $i;
+			width: math.div(100%, 12) * $i;
 		}
-	}	
+	}
 }

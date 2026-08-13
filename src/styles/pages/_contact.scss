@@ -1,6 +1,4 @@
-//
-//-- Contact Me
-//
+@use 'abstracts' as *;
 
 .contact {
 	background: $color-base;
@@ -54,10 +52,8 @@
 	background: #fff;
 	width: 100%;
 	transition: background 0.2s ease;
-
-	// remove Safari's rounded corners
 	border-radius: 0;
-	-webkit-appearance: none;
+	appearance: none;
 
 	&:focus {
 		background: #ffc;
@@ -83,4 +79,3 @@
 		transform: scale(1.1);
 	}
 }
-

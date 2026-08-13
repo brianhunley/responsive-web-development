@@ -1,6 +1,4 @@
-//
-//-- Header
-//
+@use 'abstracts' as *;
 
 .page-nav {
 	background: $color-base;
@@ -48,13 +46,17 @@
 	}
 
 	@include tablet-port {
-		font-size: em(18);		
+		font-size: em(18);
 		padding: 1em 2em;
 	}
 }
 
 .page-nav__hamburger {
 	display: inline-block;
+	background: none;
+	border: 0;
+	color: inherit;
+	font: inherit;
 	cursor: pointer;
 	transition: transform 0.2s ease;
 	margin-bottom: 1em;
@@ -71,8 +73,11 @@
 .page-nav__ul {
 	display: none;
 
+	&.is-open {
+		display: block;
+	}
+
 	@include tablet-port {
-		display: block !important;
+		display: block;
 	}
 }
-

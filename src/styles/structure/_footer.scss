@@ -1,6 +1,4 @@
-//
-//-- Footer
-//
+@use 'abstracts' as *;
 
 .page-footer {
 	background: #dcdcdc;
@@ -52,7 +50,7 @@
 
 	a {
 		color: inherit;
-		
+
 		@include hover-underline;
 	}
 }

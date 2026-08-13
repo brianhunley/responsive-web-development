@@ -1,9 +1,12 @@
+@use 'sass:math';
+@use '../config/config' as *;
+
 @function em($pixels, $ref: 16) {
-	@return ($pixels / $ref) * 1em;
+	@return math.div($pixels, $ref) * 1em;
 }
 
 @function rem($pixels, $ref: 16) {
-	@return ($pixels / $ref) * 1rem;
+	@return math.div($pixels, $ref) * 1rem;
 }
 
 @mixin vertical-center {
@@ -22,10 +25,10 @@
 }
 
 @mixin hover-border {
-  border: 3px solid transparent;
-  transition: border 0.2s ease;
+	border: 3px solid transparent;
+	transition: border 0.2s ease;
 
-  &:hover {
-    border-color: $color-highlight;
-  }
+	&:hover {
+		border-color: $color-highlight;
+	}
 }

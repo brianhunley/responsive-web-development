@@ -1,9 +1,7 @@
-//
-//-- Welcome
-//
+@use 'abstracts' as *;
 
 .welcome {
-	background: $color-base url(../images/welcome_background.jpg) no-repeat center center;
+	background: $color-base url('@/assets/images/welcome_background.jpg') no-repeat center center;
 	background-size: cover;
 	position: relative;
 	height: em(200);
@@ -21,7 +19,7 @@
 	}
 
 	@include retina {
-		background-image: url(../images/welcome_background@2x.jpg);
+		background-image: url('@/assets/images/welcome_background@2x.jpg');
 	}
 }
 
@@ -30,11 +28,11 @@
 	text-transform: uppercase;
 	font-weight: 300;
 	color: #fff;
-	text-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
 	line-height: 1;
 	text-align: center;
-	
-	@include vertical-center;	
+
+	@include vertical-center;
 
 	@include tablet-port {
 		font-size: rem(72);
@@ -58,4 +56,3 @@
 		font-size: rem(36);
 	}
 }
-

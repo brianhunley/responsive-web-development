@@ -1,10 +1,9 @@
-// main.js
+import '../styles/main.scss';
 
-(function() {
+const hamburger = document.querySelector('.page-nav__hamburger');
+const navList = document.querySelector('.page-nav__ul');
 
-	$('.page-nav__hamburger').on('click', function() {
-		console.log('clicking the link');
-		$('.page-nav__ul').toggle();
-	});
-
-})();
+hamburger?.addEventListener('click', () => {
+  const isOpen = navList?.classList.toggle('is-open') ?? false;
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+});

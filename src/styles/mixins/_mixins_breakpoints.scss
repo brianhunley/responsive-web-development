@@ -1,12 +1,4 @@
-/* example usage of the breakpoint mixins
-body {
-	background: red;
-
-	@include phone-land {
-		background: green;
-	}
-}
-*/
+@use '../config/config' as *;
 
 @mixin phone-land {
 	@media (min-width: $very-small-width) {
@@ -40,10 +32,7 @@ body {
 
 @mixin retina {
 	@media
-		only screen and (-webkit-mix-device-pixel-ratio: 2),
-		only screen and (min--moz-device-pixel-ratio: 2),
-		only screen and (-o-min-device-pixel-ratio: 2/1),
-		only screen and (min-device-pixel-ratio: 2),
+		only screen and (-webkit-min-device-pixel-ratio: 2),
 		only screen and (min-resolution: 192dpi),
 		only screen and (min-resolution: 2dppx) {
 			@content;
